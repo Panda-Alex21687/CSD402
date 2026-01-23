@@ -13,30 +13,40 @@ public class Baldree_Mod3_2 {
     public static void main(String[] args) {
 
         int rows = 7;
+        int totalWidth = 50; // Fixed width for alignment
 
         for (int i = 0; i < rows; i++) {
 
-            // Print leading spaces
-            for (int space = 0; space < (rows - i - 1) * 2; space++) {
-                System.out.print(" ");
+            String line = "";
+
+            // Leading spaces
+            for (int space = 0; space < (rows - i - 1); space++) {
+                line += "  ";
             }
 
-            // Print ascending powers of 2
+            // Ascending powers of 2
             int number = 1;
             for (int j = 0; j <= i; j++) {
-                System.out.print(number + " ");
+                line += number + " ";
                 number *= 2;
             }
 
-            // Print descending powers of 2
+            // Descending powers of 2
             number /= 4;
             for (int j = 0; j < i; j++) {
-                System.out.print(number + " ");
+                line += number + " ";
                 number /= 2;
             }
 
-            // Print @ at the end of each line
-            System.out.println("@");
+            // Pad spaces so every line is the same length
+            while (line.length() < totalWidth - 1) {
+                line += " ";
+            }
+
+            // Add @ at the same position
+            line += "@";
+
+            System.out.println(line);
         }
     }
 }
