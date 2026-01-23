@@ -11,7 +11,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class Baldree_Module2.2Assignment_CSD402 {
+public class Baldree_Mod2_2 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

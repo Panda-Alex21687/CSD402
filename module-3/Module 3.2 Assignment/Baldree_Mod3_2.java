@@ -8,7 +8,7 @@
  * followed by an @ symbol at the end of each line.
  */
 
-public class Baldree_Module3.2Assignment_CSD402 {
+public class Baldree_Mod3_2 {
 
     public static void main(String[] args) {
 
