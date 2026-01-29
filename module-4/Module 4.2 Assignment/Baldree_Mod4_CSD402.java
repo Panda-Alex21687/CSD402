@@ -8,8 +8,7 @@ public class Baldree_Mod4_CSD402 {
          * Module: 4.2 Assignment
          * Assignment: Overloaded Average Methods
          *
-         * This program demonstrates method overloading by calculating
-         * the average of arrays of different numeric data types.
+         * This program uses multiple versions of the same method to calculate the average for arrays made up of different types of numbers.
          */
 
         // Create arrays of different sizes
