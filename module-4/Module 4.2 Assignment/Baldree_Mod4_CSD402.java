@@ -1,4 +1,4 @@
-public class Baldree_Mod4_2_CSD402 {
+public class Baldree_Mod4_CSD402 {
 
     public static void main(String[] args) {
 
