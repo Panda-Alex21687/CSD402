@@ -3,7 +3,7 @@ public class Baldree_Mod4_CSD402 {
     public static void main(String[] args) {
 
         /**
-         * Name: Alex Baldree
+         * Name: Alexander Baldree
          * Course: CSD402
          * Module: 4.2 Assignment
          * Assignment: Overloaded Average Methods
