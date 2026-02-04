@@ -12,23 +12,23 @@ import java.util.Random;
 
 public class Baldree_Mod5_CSD402 {
 
-    // Main method - entry point
+    // Main method
     public static void main(String[] args) {
         Random rand = new Random();
 
         // Makes a 3x3 double array with random numbers 10.0 - 100.0
         double[][] doubleArray = new double[3][3];
-        for (int i = 0; i < doubleArray.length; i++) {
-            for (int j = 0; j < doubleArray[i].length; j++) {
-                doubleArray[i][j] = Math.round((10 + rand.nextDouble() * 90) * 10) / 10.0; // 10.0-100.0
+        for (double[] row : doubleArray) {
+            for (int j = 0; j < row.length; j++) {
+                row[j] = Math.round((10 + rand.nextDouble() * 90) * 10) / 10.0; // 10.0-100.0
             }
         }
 
         // Makes a 3x3 int array with random numbers 10 - 100
         int[][] intArray = new int[3][3];
-        for (int i = 0; i < intArray.length; i++) {
-            for (int j = 0; j < intArray[i].length; j++) {
-                intArray[i][j] = 10 + rand.nextInt(91); // 10-100
+        for (int[] row : intArray) {
+            for (int j = 0; j < row.length; j++) {
+                row[j] = 10 + rand.nextInt(91); // 10-100
             }
         }
 
