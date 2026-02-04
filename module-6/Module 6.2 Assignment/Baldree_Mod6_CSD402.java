@@ -1,7 +1,7 @@
 /**
- * Class: Baldree_Mod6_CSD402
- * Author: Alexander Baldree
- * Course: CSD402
+ * Baldree_Mod6_CSD402
+ * Alexander Baldree
+ * CSD402
  * Assignment: Module 6.2 – Fan Class
  * Description: This program defines a Fan class with speed, on/off state,
  * radius, and color. It demonstrates constructors, getters/setters, constants,
