@@ -16,16 +16,16 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;              // Java 8 uses Paths.get
 import java.nio.file.StandardOpenOption;
 import java.util.Random;
 
 public class Baldree_Mod9_Program2_CSD402 {
 
     public static void main(String[] args) {
-        Path filePath = Path.of("data.file");
+        Path filePath = Paths.get("data.file"); // Java 8+
         Random random = new Random();
 
-        // Write or append 10 random numbers
         try {
             if (Files.notExists(filePath)) {
                 Files.createFile(filePath);
@@ -34,12 +34,11 @@ public class Baldree_Mod9_Program2_CSD402 {
                 System.out.println("File already exists: data.file (will append)");
             }
 
-            // If the file already has content, add a leading space before appending more numbers
             boolean needsLeadingSpace = Files.size(filePath) > 0;
 
             try (BufferedWriter writer = Files.newBufferedWriter(
                     filePath,
-                    StandardOpenOption.WRITE,
+                    StandardOpenOption.CREATE,
                     StandardOpenOption.APPEND
             )) {
                 if (needsLeadingSpace) {
@@ -47,15 +46,12 @@ public class Baldree_Mod9_Program2_CSD402 {
                 }
 
                 for (int i = 0; i < 10; i++) {
-                    int num = random.nextInt(100); // 0-99 (change if you want 1-100)
+                    int num = random.nextInt(100); // 0-99
                     writer.write(Integer.toString(num));
-                    if (i < 9) {
-                        writer.write(" ");
-                    }
+                    if (i < 9) writer.write(" ");
                 }
             }
 
-            // Read and display file contents
             System.out.println("\nContents of data.file:");
             try (BufferedReader reader = Files.newBufferedReader(filePath)) {
                 String line;

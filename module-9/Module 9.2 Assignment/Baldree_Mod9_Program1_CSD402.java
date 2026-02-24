@@ -19,6 +19,7 @@ import java.util.Scanner;
 public class Baldree_Mod9_Program1_CSD402 {
 
     public static void main(String[] args) {
+
         ArrayList<String> items = new ArrayList<>();
 
         // Minimum of 10 Strings
@@ -40,25 +41,23 @@ public class Baldree_Mod9_Program1_CSD402 {
             count++;
         }
 
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("\nWhich element would you like to see again? (Enter a number 1-" + items.size() + "): ");
+            String userInput = scanner.nextLine(); // user's String input
 
-        System.out.print("\nWhich element would you like to see again? (Enter a number 1-" + items.size() + "): ");
-        String userInput = scanner.nextLine(); // user's String input
+            try {
+                // Autoboxing: int -> Integer (wrapper object)
+                Integer choice = Integer.valueOf(userInput);
 
-        try {
-            // Convert String -> int, then demonstrate autoboxing
-            Integer choice = Integer.parseInt(userInput); // autoboxing into Integer
-            int index = choice - 1; // auto-unboxing Integer -> int
+                // Auto-unboxing: Integer -> int
+                int index = choice - 1;
 
-            // Try printing the chosen element (this may throw IndexOutOfBoundsException)
-            System.out.println("You selected: " + items.get(index));
-        } catch (NumberFormatException e) {
-            System.out.println("Exception thrown: Out of Bounds");
-            System.out.println("(Input was not a valid number.)");
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Exception thrown: Out of Bounds");
+                // Try printing the chosen element (may throw IndexOutOfBoundsException)
+                System.out.println("You selected: " + items.get(index));
+
+            } catch (NumberFormatException | IndexOutOfBoundsException e) {
+                System.out.println("Exception thrown: Out of Bounds");
+            }
         }
-
-        scanner.close();
     }
 }

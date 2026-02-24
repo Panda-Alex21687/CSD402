@@ -1,2 +1,2 @@
 # CSD402
-CSD402 Repossitory
+CSD402 Repository
