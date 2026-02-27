@@ -16,14 +16,14 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;              // Java 8 uses Paths.get
+import java.nio.file.Paths;              
 import java.nio.file.StandardOpenOption;
 import java.util.Random;
 
 public class Baldree_Mod9_Program2_CSD402 {
 
     public static void main(String[] args) {
-        Path filePath = Paths.get("data.file"); // Java 8+
+        Path filePath = Paths.get("data.file");
         Random random = new Random();
 
         try {

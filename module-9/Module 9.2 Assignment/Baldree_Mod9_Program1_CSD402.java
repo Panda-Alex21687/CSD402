@@ -10,7 +10,7 @@
  * - Asks the user which element they want to see again (by number)
  * - Uses try/catch to safely print the requested element
  * - If invalid, prints: "Exception thrown: Out of Bounds"
- * - Demonstrates Autoboxing/Auto-Unboxing with user's String input
+ * - Demonstrates Autoboxing/Auto-Unboxing with String input
  */
 
 import java.util.ArrayList;
