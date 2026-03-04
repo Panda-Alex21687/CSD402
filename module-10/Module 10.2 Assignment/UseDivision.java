@@ -6,6 +6,7 @@
  * Application to test Division subclasses
  */
 
+
 public class UseDivision {
 
     public static void main(String[] args) {

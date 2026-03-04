@@ -8,8 +8,8 @@
 
 public class InternationalDivision extends Division {
 
-    private String country;
-    private String language;
+    private final String country;
+    private final String language;
 
     // Constructor requiring all fields
     public InternationalDivision(String divisionName, int accountNumber, String country, String language) {
